@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'WorkSans_400';
+  src: url(/assets/fonts/static/WorkSans-Regular.ttf);
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'WorkSans_600';
+  src: url(/assets/fonts/static/WorkSans-SemiBold.ttf);
+  font-display: swap;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'WorkSans_700';
+  src: url(/assets/fonts/static/WorkSans-Bold.ttf);
+  font-display: swap;
+  font-weight: 700;
+}
+
+:root {
+  --white: #ffffff;
+  --light-pink: #f9f0ff;
+  --grayish-purple: #8c6991;
+  --dark-purple: #2f1533;
+
+  --ff400: 'WorkSans_400';
+  --ff600: 'WorkSans_600';
+  --ff700: 'WorkSans_700';
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+  font-family: var(--ff400);
+  background-color: var(--light-pink);
+  background-image: url(/assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top 20px;
+  padding: 2em;
+}
+
+.card__title-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.card__title {
+  font-size: 2rem;
+  font-family: var(--ff700);
+  color: var(--dark-purple);
+}
+
+.card {
+  display: grid;
+  gap: 1rem;
+  max-width: 31.25rem;
+  background-color: var(--white);
+  padding: 2em;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px var(--dark-purple);
+  position: absolute;
+  top: 20%;
+  box-shadow: -7px 0px 15px 0px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+summary::before {
+  order: 2;
+  padding: 0 1em;
+  content: url(/assets/images/icon-plus.svg);
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: var(--dark-purple); */
+  padding: 1em;
+  list-style: none;
+  color: var(--dark-purple);
+  font-family: var(--ff600);
+}
+
+summary:is(:hover, :focus, :active) {
+  cursor: pointer;
+
+}
+
+summary:hover {
+  color: var(--grayish-purple);
+}
+
+details[open]>summary::before {
+  color: var(--dark-purple);
+  content: url(/assets/images/icon-minus.svg);
+  order: 2;
+}
+
+details[open]>summary {
+  background-color: var(--light-pink);
+  color: var(--dark-purple);
+}
+
+details[open] {
+  border-bottom: 1px solid var(--grayish-purple);
+}
+
+details>p {
+  padding: 1em 2em;
+  line-height: 1.5;
+  color: var(--grayish-purple);
+}
+
+
+
+
+@media screen and (min-width: 23.125rem) {
+  body {
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+  }
+}
