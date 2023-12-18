@@ -49,7 +49,7 @@ body {
 }
 
 .card__title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: var(--ff700), sans-serif;
   color: var(--dark-purple);
 }
