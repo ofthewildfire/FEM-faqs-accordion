@@ -113,7 +113,12 @@ details[open]>summary {
 }
 
 details[open] {
-  border-bottom: 1px solid var(--grayish-purple);
+  border-bottom: 1px solid rgba(140, 105, 145, 0.379);
+  padding-bottom: .5em;
+}
+
+details[open]:last-of-type {
+  border-bottom: none;
 }
 
 details>p {
