@@ -40,7 +40,7 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   font-family: var(--ff400), sans-serif;
   background-color: var(--light-pink);
   background-image: url(/assets/images/background-pattern-mobile.svg);
