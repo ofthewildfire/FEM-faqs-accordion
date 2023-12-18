@@ -41,11 +41,11 @@ body {
   place-content: center;
   min-height: 100vh;
   max-width: 1440px;
-  font-family: var(--ff400);
+  font-family: var(--ff400), sans-serif;
   background-color: var(--light-pink);
   background-image: url(/assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
-  background-position: top 20px;
+  background-position: top;
   padding: 2em;
 }
 
@@ -57,7 +57,7 @@ body {
 
 .card__title {
   font-size: 2rem;
-  font-family: var(--ff700);
+  font-family: var(--ff700), sans-serif;
   color: var(--dark-purple);
 }
 
@@ -89,7 +89,7 @@ summary {
   padding: 1em;
   list-style: none;
   color: var(--dark-purple);
-  font-family: var(--ff600);
+  font-family: var(--ff600), sans-serif;
 }
 
 summary:is(:hover, :focus, :active) {
@@ -122,6 +122,9 @@ details>p {
   color: var(--grayish-purple);
 }
 
+footer {
+  text-align: center;
+}
 
 @media screen and (min-width: 23.125rem) {
   body {
